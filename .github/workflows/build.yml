@@ -49,7 +49,7 @@ jobs:
     - name: Publish Repo
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        {% raw %}GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}{% endraw %}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BASE_BRANCH: main # The branch the action should deploy from.
         BRANCH: 'example-build' # The branch the action should deploy to.
         FOLDER: python_boilerplate/ # The folder the action should deploy
