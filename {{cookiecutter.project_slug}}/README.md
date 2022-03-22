@@ -10,20 +10,6 @@
 
 ---
 
-## Features
-
--   Store values and retain the prior value in memory
--   ... some other functionality
-
-## Quick Start
-
-```python
-from {{ cookiecutter.project_slug }} import Example
-
-a = Example()
-a.get_value()  # 10
-```
-
 ## Installation
 
 **Stable Release:** `pip install {{ cookiecutter.project_slug }}`<br>
@@ -101,6 +87,3 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to developing the
    each set of changes to `main` atomic and as a side effect naturally encourages small
    well defined PR's.
 
-{% if is_open_source %}
-**{{ cookiecutter.open_source_license }}**
-{% endif %}

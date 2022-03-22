@@ -6,6 +6,9 @@ __pycache__/
 # C extensions
 *.so
 
+# Custom ones
+.idea
+
 # Distribution / packaging
 .Python
 env/
@@ -67,16 +70,13 @@ instance/
 
 # Sphinx documentation
 docs/_build/
-docs/{{ cookiecutter.project_slug }}.*rst
+docs/camera_alignment_core.*rst
 
 # PyBuilder
 target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
-
-# pyenv
-.python-version
 
 # celery beat schedule file
 celerybeat-schedule
@@ -110,3 +110,7 @@ ENV/
 
 # VSCode
 .vscode
+
+# test files
+camera_alignment_core/tests/tmp_results
+*.tiff

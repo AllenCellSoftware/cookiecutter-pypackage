@@ -1,7 +1,5 @@
 # Cookiecutter PyPackage
 
-[![Example Repo Status](https://github.com/AllenCellModeling/cookiecutter-pypackage/workflows/Build%20Example%20Repo/badge.svg)](https://github.com/AllenCellModeling/cookiecutter-pypackage/tree/example-build)
-
 ![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 AICS Cookiecutter template for a Python package.
@@ -24,20 +22,13 @@ We think that this template provides a good starting point for any Python projec
 
 ## Features
 
--   Uses `tox` (an environment manager) and `pytest` for local testing, simply run `tox`
-    or `make build` from a terminal in the project home directory
 -   Runs tests on Windows, Mac, and Ubuntu on every branch and pull request commit using
     GitHub Actions
 -   Releases your Python Package to PyPI when you push to `main` after using
     `bump2version`
 -   Automatically builds documentation using Sphinx on every push to main and deploys
     to GitHub Pages
--   Includes example code samples for objects, tests, and bin scripts
 
-## Example
-
--   For an example of the base project that is built from this template, go to the
-    [example-build branch](https://github.com/AllenCellModeling/cookiecutter-pypackage/tree/example-build).
 
 ## Quickstart
 
@@ -45,29 +36,29 @@ To use this template use the following commands and then follow the prompts from
 terminal.
 
 1. `pip install cookiecutter`
-2. `cookiecutter gh:AllenCellModeling/cookiecutter-pypackage`
+2. `cookiecutter gh:aics-int/cookiecutter-pypackage` # Change to link to repo
 
 ## The Four Commands You Need To Know
 
-1. `pip install -e .[dev]`
+1. `make install`
+
+    This will setup a virtual environment local to this project and install all of the
+    project's dependencies into it. The virtual env will be located in `camera-alignment-core/venv`.
+
+2. `make test`, `make fmt`, `make lint`, `make type-check`, `make import-sort`
+
+    Quality assurance
+
+3. `pip install -e .[dev]`
 
     This will install your package in editable mode with all the required development
-    dependencies (i.e. `tox`).
+    dependencies.
 
-2. `make build`
-
-    This will run `tox` which will run all your tests in both Python 3.7
-    and Python 3.8 as well as linting your code.
-
-3. `make clean`
+4. `make clean`
 
     This will clean up various Python and build generated files so that you can ensure
-    that you are working in a clean environment.
+    that you are working in a clean workspace.
 
-4. `make docs`
-
-    This will generate and launch a web browser to view the most up-to-date
-    documentation for your Python package.
 
 #### Optional Steps:
 
@@ -109,4 +100,4 @@ terminal.
    each set of changes to `main` atomic and as a side effect naturally encourages small
    well defined PR's.
 
-**Original repo:** https://github.com/audreyr/cookiecutter-pypackage/
+**Original repo:** https://github.com/AllenCellModeling/cookiecutter-pypackage
