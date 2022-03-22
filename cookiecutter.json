@@ -1,7 +1,7 @@
 {
-  "full_name": "Jackson Maxfield Brown",
-  "email": "jacksonb@alleninstitute.org",
-  "github_username": "AllenCellModeling",
+  "full_name": "AICS Software",
+  "email": "AICS_SW@alleninstitute.org",
+  "github_username": "AICS-INT",
   "project_name": "Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
