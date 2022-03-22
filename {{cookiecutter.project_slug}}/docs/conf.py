@@ -6,7 +6,7 @@
 import os
 import sys
 
-import camera_alignment_core
+import {{ cookiecutter.project_name }}
 
 # -- Path setup --------------------------------------------------------------
 
@@ -17,11 +17,11 @@ sys.path.insert(0, os.path.abspath(".."))
 
 
 # -- Project information -----------------------------------------------------
-project = "camera_alignment_core"
+project = "{{ cookiecutter.project_name }}"
 copyright = "2021, AICS"
 author = "AICS"
-version = camera_alignment_core.__version__
-release = camera_alignment_core.__version__
+version = {{ cookiecutter.project_name }}.__version__
+release = {{ cookiecutter.project_name }}.__version__
 
 
 # -- General configuration ---------------------------------------------------
