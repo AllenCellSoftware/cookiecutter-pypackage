@@ -9,12 +9,12 @@ requirements = [
 
 dev_requirements = [
     # Test
-    "black == 21.7b0",
+    "black ~= 22.3.0",
     "flake8 ~= 4.0.1",
     "isort ~= 5.10.1",
-    "mypy ~= 0.910",
     "pytest ~= 6.2.5",
     "pytest-raises ~= 0.11",
+    "types-requests ~= 2.27.16",
 
     # Dev workflow
     "pre-commit ~= 2.17.0",

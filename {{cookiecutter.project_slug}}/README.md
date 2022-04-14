@@ -27,12 +27,12 @@ For full package documentation please visit [{{ cookiecutter.github_username }}.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to developing the code.
 
-## The Four Commands You Need To Know
+## The Commands You Need To Know
 
 1. `make install`
 
     This will setup a virtual environment local to this project and install all of the
-    project's dependencies into it. The virtual env will be located in `camera-alignment-core/venv`.
+    project's dependencies into it. The virtual env will be located in `{{ cookiecutter.project_slug }}/venv`.
 
 2. `make test`, `make fmt`, `make lint`, `make type-check`, `make import-sort`
 
@@ -43,7 +43,19 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for information related to developing the
     This will install your package in editable mode with all the required development
     dependencies.
 
-4. `make clean`
+4. `make docs`
+
+    This will generate documentation using sphinx. 
+
+5. `make publish` and `make publish-snapshot`
+
+    Running this command will start the process of publishing to PyPI
+
+6. `make bumpversion' - [release, major, minor, patch, dev]
+    
+    update verisoning with new releases 
+
+7. `make clean`
 
     This will clean up various Python and build generated files so that you can ensure
     that you are working in a clean workspace.
