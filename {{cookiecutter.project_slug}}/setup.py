@@ -4,7 +4,7 @@ requirements = [
     "aicsimageio ~= 4.4",
     "aicspylibczi ~= 3.0.0",
     "numpy ~= 1.21",
-    "scikit-image ~= 0.18"
+    "scikit-image ~= 0.18",
 ]
 
 dev_requirements = [
@@ -15,19 +15,14 @@ dev_requirements = [
     "pytest ~= 6.2.5",
     "pytest-raises ~= 0.11",
     "types-requests ~= 2.27.16",
-
     # Dev workflow
     "pre-commit ~= 2.17.0",
-
     # Build
     "build == 0.7.0",
-
     # Version
     "bump2version ~= 1.0.1",
-
     # Publish
     "twine ~= 3.7.1",
-
     # Documentation generation
     "Sphinx ~= 4.4.0",
     "furo == 2022.1.2",  # Third-party theme (https://pradyunsg.me/furo/quickstart/)
