@@ -1,16 +1,59 @@
+[project]
+name = "{{ cookiecutter.project_slug }}"
+version = "3.0.0"  # Do not edit manually; managed by bumpversion
+description = "{{ cookiecutter.project_short_description }}"
+authors = [
+    {name = "{{ cookiecutter.full_name.replace('\"', '\\\"') }}", email="!{{ cookiecutter.email }}"},
+]
+license = {file = "LICENSE.txt"}
+readme = "README.md"
+requires-python = ">=3.9.2"
+
+dependencies = [
+
+]
+
+[project.optional-dependencies]
+dev = [
+    "black == 22.8.0",
+    "build == 0.7.0",
+    "bump2version ~= 1.0.1",
+    "flake8 ~= 5.0.4",
+    "furo == 2022.9.29",
+    "isort ~= 5.9",
+    "m2r2 ~= 0.3.3",
+    "mypy == 0.982",
+    "numpy ~= 1.23.4",
+    "pre-commit ~= 2.20.0",
+    "pytest ~= 7.2.0",
+    "Sphinx ~= 5.3.0",
+    "tifffile == 2022.10.10",
+    "twine ~= 4.0.1",
+    "types-python-dateutil ~= 2.8.19",
+    "types-requests ~= 2.28.11",
+    "wheel ~= 0.37.0",
+]
+
+[project.urls]
+homepage = "https://github.com/aics-int/"
+documentation = "https://aics-int.github.io/"
+repository = "https://github.com/aics-int/"
+
 [build-system]
 # https://setuptools.pypa.io/en/latest/build_meta.html
-requires = ["setuptools", "wheel"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
-[tool.isort]
-force_sort_within_sections = true
-line_length = 50
-multi_line_output = 3  # https://pycqa.github.io/isort/docs/configuration/multi_line_output_modes.html
-profile = "black"
+[project.scripts]
+celigo_pipeline_cli= "celigo_pipeline_core.bin.celigo_pipeline_core_cli:main"
 
 [tool.pytest.ini_options]
 addopts = "-v"
 testpaths = [
     "{{ cookiecutter.project_name }}/tests",
 ]
+
+[build-system]
+# https://setuptools.pypa.io/en/latest/build_meta.html
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
