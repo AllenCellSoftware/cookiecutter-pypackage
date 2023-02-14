@@ -14,6 +14,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+
 dev = [
     "black == 22.8.0",
     "build == 0.7.0",
@@ -34,10 +35,11 @@ dev = [
     "wheel ~= 0.37.0",
 ]
 
+
 [project.urls]
-homepage = "https://github.com/aics-int/"
-documentation = "https://aics-int.github.io/"
-repository = "https://github.com/aics-int/"
+homepage = "https://github.com/aics-int/{{ cookiecutter.project_slug }}"
+documentation = "https://aics-int.github.io/{{ cookiecutter.project_slug }}"
+repository = "https://github.com/aics-int/{{ cookiecutter.project_slug }}"
 
 [build-system]
 # https://setuptools.pypa.io/en/latest/build_meta.html
@@ -45,15 +47,4 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project.scripts]
-celigo_pipeline_cli= "celigo_pipeline_core.bin.celigo_pipeline_core_cli:main"
-
-[tool.pytest.ini_options]
-addopts = "-v"
-testpaths = [
-    "{{ cookiecutter.project_name }}/tests",
-]
-
-[build-system]
-# https://setuptools.pypa.io/en/latest/build_meta.html
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+celigo_pipeline_cli= "{{ cookiecutter.project_slug }}.bin.FUNCTION:main"
